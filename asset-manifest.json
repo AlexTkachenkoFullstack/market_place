@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/market_place/static/css/main.c3b51087.css",
+    "main.js": "/market_place/static/js/main.48035450.js",
+    "static/js/981.8bbc5022.chunk.js": "/market_place/static/js/981.8bbc5022.chunk.js",
+    "static/js/513.758b1116.chunk.js": "/market_place/static/js/513.758b1116.chunk.js",
+    "static/js/617.e5714b76.chunk.js": "/market_place/static/js/617.e5714b76.chunk.js",
+    "static/js/970.dba853c0.chunk.js": "/market_place/static/js/970.dba853c0.chunk.js",
+    "static/js/842.bd64abfb.chunk.js": "/market_place/static/js/842.bd64abfb.chunk.js",
+    "static/js/578.c8cbf79c.chunk.js": "/market_place/static/js/578.c8cbf79c.chunk.js",
+    "static/media/deskBgImg.png": "/market_place/static/media/deskBgImg.f65ad97bbf7c47e00ad0.png",
+    "static/media/5143237.jpg": "/market_place/static/media/5143237.8ec9ed15a4b7d79dfc34.jpg",
+    "static/media/pngtree-hand-drawn-seamless-pattern-with-books-and-bo.jpg": "/market_place/static/media/pngtree-hand-drawn-seamless-pattern-with-books-and-bo.0bc876ea227a93b5dba5.jpg",
+    "static/media/bgMainPage.png": "/market_place/static/media/bgMainPage.fa47f7dad450bfa5d470.png",
+    "static/media/smattphone.webp": "/market_place/static/media/smattphone.670d0ba5d42f4ca0debc.webp",
+    "index.html": "/market_place/index.html",
+    "main.c3b51087.css.map": "/market_place/static/css/main.c3b51087.css.map",
+    "main.48035450.js.map": "/market_place/static/js/main.48035450.js.map",
+    "981.8bbc5022.chunk.js.map": "/market_place/static/js/981.8bbc5022.chunk.js.map",
+    "513.758b1116.chunk.js.map": "/market_place/static/js/513.758b1116.chunk.js.map",
+    "617.e5714b76.chunk.js.map": "/market_place/static/js/617.e5714b76.chunk.js.map",
+    "970.dba853c0.chunk.js.map": "/market_place/static/js/970.dba853c0.chunk.js.map",
+    "842.bd64abfb.chunk.js.map": "/market_place/static/js/842.bd64abfb.chunk.js.map",
+    "578.c8cbf79c.chunk.js.map": "/market_place/static/js/578.c8cbf79c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c3b51087.css",
+    "static/js/main.48035450.js"
+  ]
+}
