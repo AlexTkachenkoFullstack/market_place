@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkmarket_place=self.webpackChunkmarket_place||[]).push([[544],{544:function(e,a,c){c.r(a);var n=c(184);a.default=function(){return(0,n.jsx)("div",{children:"Home"})}}}]);
+//# sourceMappingURL=544.5a0d48e1.chunk.js.map

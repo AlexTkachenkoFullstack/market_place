@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkmarket_place=self.webpackChunkmarket_place||[]).push([[427],{427:function(e,n,r){r.r(n);var a=r(184);n.default=function(){return(0,a.jsx)(a.Fragment,{children:(0,a.jsx)("div",{children:"Login"})})}}}]);
+//# sourceMappingURL=427.9f81192a.chunk.js.map
