@@ -15,8 +15,10 @@ margin-bottom:10px;
 `
 
 export const RegInput=styled.input`
+cursor:pointer;
 `
 export const RegLabel=styled.label`
+
 `
 
 export const RegCheckboxContainer =styled.div`
@@ -28,6 +30,7 @@ justify-content:space-between;
 export const RegCheckboxLabel=styled.label`
 `
 export const RegCheckboxInput=styled.input`
+cursor:pointer;
 `
 
 export const RegButton=styled.button`
