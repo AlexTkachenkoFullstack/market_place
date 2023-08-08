@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { RegForm, RegInputContainer, RegInput, RegLabel, RegCheckboxContainer, RegCheckboxLabel, RegCheckboxInput, RegButton } from "./RegistrationForm.styled"
 
 const RegistrationForm = () => {
 const [tel, setTel]=useState('')
@@ -51,34 +52,34 @@ const [agreement, setAgreement]=useState(false)
     }
 
     return (
-         <form onSubmit={handleSubmit} style={{width:500, marginLeft:'auto', marginRight:'auto', display:'flex', flexDirection:'column'}}>
-                <div style={{display:'flex', justifyContent:'space-between', marginBottom:10}}>
-                    <label htmlFor="inputTel" >Phone number</label>
-                <input type="tel" maxLength={15} onChange={handleChange} id="inputTel" name='tel' value={tel} />
-                </div>
-                <div style={{display:'flex', justifyContent:'space-between', marginBottom:10}}>
-                    <label htmlFor="inputEmail1" >Email address</label>
-                <input type="email" onChange={handleChange}  id="inputEmail1" aria-describedby="emailHelp" name='email' value={email} />
-                </div>
-                <div style={{display:'flex', justifyContent:'space-between', marginBottom:10}}>
-                    <label htmlFor="inputPassword" >Password</label>
-                <input type="password" onChange={handleChange}  id="inputPassword" name='password' value={password} />
-                </div>
-                <div style={{display:'flex', justifyContent:'space-between', marginBottom:10}}>
-                    <label htmlFor="inputCountry" >Country</label>
-                    <input type="text" onChange={handleChange}  id="inputCountry" name='country' value={country} />
-                </div>
-                <div style={{display:'flex', justifyContent:'space-between', marginBottom:10}}>
-                    <label htmlFor="inputCity">City</label>
-                    <input type="text" onChange={handleChange}  id="inputCity" name='city' value={city} />
-                </div>
-                <div style={{display:'flex', justifyContent:'space-between', marginBottom:10}}>
-                    <label htmlFor="inputAgreement">I give my consent for the processing of my personal data</label>
-                    <input type="checkbox" onChange={handleChange}  id="inputAgreement" name='agreement' checked={agreement} />
-                </div>
+         <RegForm onSubmit={handleSubmit}>
+                <RegInputContainer>
+                    <RegLabel htmlFor="inputTel" >Phone number</RegLabel>
+                <RegInput type="tel" maxLength={15} onChange={handleChange} id="inputTel" name='tel' value={tel} />
+                </RegInputContainer>
+                <RegInputContainer >
+                    <RegLabel htmlFor="inputEmail1" >Email address</RegLabel>
+                <RegInput type="email" onChange={handleChange}  id="inputEmail1" aria-describedby="emailHelp" name='email' value={email} />
+                </RegInputContainer>
+                <RegInputContainer >
+                    <RegLabel htmlFor="inputPassword" >Password</RegLabel>
+                <RegInput type="password" onChange={handleChange}  id="inputPassword" name='password' value={password} />
+                </RegInputContainer>
+                <RegInputContainer >
+                    <RegLabel htmlFor="inputCountry" >Country</RegLabel>
+                    <RegInput type="text" onChange={handleChange}  id="inputCountry" name='country' value={country} />
+                </RegInputContainer>
+                <RegInputContainer >
+                    <RegLabel htmlFor="inputCity">City</RegLabel>
+                    <RegInput type="text" onChange={handleChange}  id="inputCity" name='city' value={city} />
+                </RegInputContainer>
+                <RegCheckboxContainer>
+                    <RegCheckboxLabel htmlFor="inputAgreement">I give my consent for the processing of my personal data</RegCheckboxLabel>
+                    <RegCheckboxInput type="checkbox" onChange={handleChange}  id="inputAgreement" name='agreement' checked={agreement} />
+                </RegCheckboxContainer>
 
-                <button type="submit" disabled={!agreement}  style={{width: 100, height:50, backgroundColor:'#bfdbe84a'}}>Register</button>
-            </form>
+                <RegButton type="submit" disabled={!agreement}>Register</RegButton>
+            </RegForm>
     )
 }
 
