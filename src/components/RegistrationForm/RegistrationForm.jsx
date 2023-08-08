@@ -1,24 +1,34 @@
-import { useDispatch } from "react-redux"
-import { EmailHelpText, Form, Input, InputContainer, Label, RegButton } from "./RegistrationForm.styled"
-import { registrationThunk } from "redux/auth/operations"
 import { useState } from "react"
 
 const RegistrationForm = () => {
-const dispatch=useDispatch()
-const [name, setName]=useState('')
+const [tel, setTel]=useState('')
 const [email, setEmail]=useState('')
 const [password, setPassword] = useState('')
+const [country, setCountry]=useState('')
+const [city, setCity]=useState('')
+const [agreement, setAgreement]=useState(false)
+
+
     
     const handleChange = (e) => {
         switch (e.target.name) {
-            case 'name':
-                setName(e.target.value);
+            case 'tel':
+                setTel(e.target.value);
                 break
             case 'email':
                 setEmail(e.target.value);
                 break
             case 'password':
                 setPassword(e.target.value);
+                break
+            case 'country':
+                setCountry(e.target.value);
+                break
+            case 'city':
+                setCity(e.target.value);
+                break
+            case 'agreement':
+                setAgreement(e.target.checked);
                 break
             default: return;   
         }
@@ -27,35 +37,48 @@ const [password, setPassword] = useState('')
     
     const handleSubmit = (e) => {
         e.preventDefault()
-        const name = e.target.elements.name.value;
-        const password = e.target.elements.password.value;
-        const email = e.target.elements.email.value;
-        if (!name || !password || !email) {
+        console.dir(e.target)
+        if (!tel || !password || !email || !country || !city || !agreement) {
             alert('Please fill in all fields of the form')
             return
         }
-        dispatch(registrationThunk({ name, email, password }))
-        setName('');
+        setTel('');
         setEmail('');
         setPassword('')
+        setCountry('')
+        setCity('')
+        setAgreement(false)
     }
+
     return (
-         <Form onSubmit={handleSubmit}>
-                <InputContainer>
-                    <Label htmlFor="inputName" className="form-label" >Name</Label>
-                <Input type="text" maxLength={15} onChange={handleChange} className="form-control" id="inputName" name='name' value={name} />
-                </InputContainer>
-                <InputContainer >
-                    <Label htmlFor="inputEmail1" className="form-label">Email address</Label>
-                <Input type="email" onChange={handleChange} className="form-control" id="inputEmail1" aria-describedby="emailHelp" name='email' value={email} />
-                    <EmailHelpText id="emailHelp" className="form-text">We'll never share your email with anyone else.</EmailHelpText>
-                </InputContainer>
-                <InputContainer >
-                    <Label htmlFor="inputPassword1" className="form-label">Password</Label>
-                <Input type="password" onChange={handleChange} className="form-control" id="inputPassword1" name='password' value={password} />
-                </InputContainer>
-                <RegButton type="submit" className="btn btn-primary">Register</RegButton>
-            </Form>
+         <form onSubmit={handleSubmit} style={{width:500, marginLeft:'auto', marginRight:'auto', display:'flex', flexDirection:'column'}}>
+                <div style={{display:'flex', justifyContent:'space-between', marginBottom:10}}>
+                    <label htmlFor="inputTel" >Phone number</label>
+                <input type="tel" maxLength={15} onChange={handleChange} id="inputTel" name='tel' value={tel} />
+                </div>
+                <div style={{display:'flex', justifyContent:'space-between', marginBottom:10}}>
+                    <label htmlFor="inputEmail1" >Email address</label>
+                <input type="email" onChange={handleChange}  id="inputEmail1" aria-describedby="emailHelp" name='email' value={email} />
+                </div>
+                <div style={{display:'flex', justifyContent:'space-between', marginBottom:10}}>
+                    <label htmlFor="inputPassword" >Password</label>
+                <input type="password" onChange={handleChange}  id="inputPassword" name='password' value={password} />
+                </div>
+                <div style={{display:'flex', justifyContent:'space-between', marginBottom:10}}>
+                    <label htmlFor="inputCountry" >Country</label>
+                    <input type="text" onChange={handleChange}  id="inputCountry" name='country' value={country} />
+                </div>
+                <div style={{display:'flex', justifyContent:'space-between', marginBottom:10}}>
+                    <label htmlFor="inputCity">City</label>
+                    <input type="text" onChange={handleChange}  id="inputCity" name='city' value={city} />
+                </div>
+                <div style={{display:'flex', justifyContent:'space-between', marginBottom:10}}>
+                    <label htmlFor="inputAgreement">I give my consent for the processing of my personal data</label>
+                    <input type="checkbox" onChange={handleChange}  id="inputAgreement" name='agreement' checked={agreement} />
+                </div>
+
+                <button type="submit" disabled={!agreement}  style={{width: 100, height:50, backgroundColor:'#bfdbe84a'}}>Register</button>
+            </form>
     )
 }
 
